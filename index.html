@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./node_modules/material-design-icons-iconfont/dist/material-design-icons.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/res.css">
 </head>
 
 <body>
@@ -48,32 +49,32 @@
         </div>
     </section>
 
-    <section id="services" class="container py-5">
-        <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back">Services</h2>
+    <section id="services" class="container py-5" data-aos-once="true">
+        <h2 data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-once="true">Services</h2>
         <div class="row">
             <div class="col-md-6">
-                <div class="service-box text-right" data-aos="fade-down-right">
+                <div class="service-box text-right" data-aos="fade-down-right" data-aos-once="true">
                     <i class="fas fa-shield-alt"></i>
                     <strong>Cybersecurity Consulting:</strong>
                     <p>Providing expert guidance to secure your systems and data from potential threats.</p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="service-box text-left" data-aos="fade-down-left" data-aos-delay="100">
+                <div class="service-box text-left" data-aos="fade-down-left" data-aos-delay="100" data-aos-once="true">
                     <i class="fas fa-code"></i>
                     <strong>Web Development:</strong>
                     <p>Creating responsive and user-friendly websites tailored to your needs.</p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="service-box text-right" data-aos="fade-up-right" data-aos-delay="200">
+                <div class="service-box text-right" data-aos="fade-up-right" data-aos-delay="200" data-aos-once="true">
                     <i class="fas fa-database"></i>
                     <strong>Database Management:</strong>
                     <p>Designing and managing databases to ensure optimal performance and security.</p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="service-box text-left" data-aos="fade-up-left" data-aos-delay="300">
+                <div class="service-box text-left" data-aos="fade-up-left" data-aos-delay="300" data-aos-once="true">
                     <i class="fas fa-lock"></i>
                     <strong>Ethical Hacking and Vulnerability Assessment:</strong>
                     <p>Identifying weaknesses in your systems to enhance security measures.</p>
@@ -107,17 +108,17 @@
             </div>
             <div class="col-md-4">
                 <div class="card shadow p-4" style="border-radius: 15px;">
-                    <form id="myForm">
+                    <form action="" id="myForm">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="name" required>
+                            <input type="text" class="form-control" id="name" placeholder="name">
                         </div>
                         <br>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="email" required>
+                            <input type="email" class="form-control" id="email" placeholder="email">
                         </div>
                         <br>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" rows="4" placeholder="message" required></textarea>
+                            <textarea class="form-control" id="message" rows="4" placeholder="message"></textarea>
                         </div>
                         <br>
                         <button type="submit" class="btn btn-block col-md-3">Send</button>

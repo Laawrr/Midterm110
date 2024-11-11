@@ -3,29 +3,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&display=swap');
 
 @font-face {
-  font-family: 'Hacker'; 
+  font-family: 'Hacker';
   src: url('../assets/fonts/Hacker.ttf');
-  font-weight: normal; 
-  font-style: normal; 
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: 'Autumn'; 
+  font-family: 'Autumn';
   src: url('../assets/fonts/Autumn_in_September.ttf');
-  font-weight: normal; 
-  font-style: normal; 
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-  font-family: 'Wondercity'; 
+  font-family: 'Wondercity';
   src: url('../assets/fonts/Wondercity.otf');
-  font-weight: normal; 
-  font-style: normal; 
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
   margin: 0;
   height: 100%;
-  backdrop-filter: blur(20px); 
-  -webkit-backdrop-filter: blur(15px); 
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(15px);
   background: #FFFDEF;
 }
 
@@ -37,17 +39,19 @@ header {
   font-weight: 900;
   font-size: 3.5em;
   color: #616f39;
-  text-shadow:  
-  0 0 10px rgba(97, 111, 57, 0.3);
+  text-shadow:
+    0 0 10px rgba(97, 111, 57, 0.3);
 }
 
 @keyframes leadColor {
   0% {
     color: #616F39;
   }
+
   50% {
     color: #A7D129;
   }
+
   100% {
     color: #616F39;
   }
@@ -78,7 +82,7 @@ nav .menu {
   backdrop-filter: blur(20px);
   position: absolute;
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: -webkit-box;
@@ -86,11 +90,11 @@ nav .menu {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 nav .menu.active {
@@ -98,7 +102,7 @@ nav .menu.active {
   display: -ms-flexbox;
   display: flex;
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 
 nav .menu li {
@@ -108,8 +112,8 @@ nav .menu li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 nav .menu li a {
@@ -125,7 +129,9 @@ nav .menu li a {
   transition: background 0.2s ease-in-out;
 }
 
-nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
+nav .menu li a:hover,
+nav .menu li a:focus,
+nav .menu li a:active {
   color: #faf1e698;
 }
 
@@ -146,23 +152,25 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
   display: block;
   overflow: hidden;
   text-indent: 100%;
-  background: #616f39; /* Dark accent for toggle */
+  background: #616f39;
+  /* Dark accent for toggle */
   border-radius: 2px;
   white-space: nowrap;
   -webkit-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
 
-.menu-toggle::before, .menu-toggle::after {
+.menu-toggle::before,
+.menu-toggle::after {
   left: 0;
   content: "";
   width: 22px;
   height: 4px;
-  background: #616f39; 
+  background: #616f39;
   border-radius: 2px;
   position: absolute;
   -webkit-transform-origin: center center;
-          transform-origin: center center;
+  transform-origin: center center;
   -webkit-transition: width 0.2s ease-in-out, background 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   transition: width 0.2s ease-in-out, background 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
   transition: width 0.2s ease-in-out, background 0.2s ease-in-out, transform 0.2s ease-in-out, top 0.2s ease-in-out, bottom 0.2s ease-in-out, left 0.2s ease-in-out, right 0.2s ease-in-out;
@@ -184,61 +192,85 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
 .menu-toggle.menu-open::before {
   top: 8px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .menu-toggle.menu-open::after {
   bottom: 8px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.menu-toggle.menu-open::before, .menu-toggle.menu-open::after {
+.menu-toggle.menu-open::before,
+.menu-toggle.menu-open::after {
   width: 26px;
-  background: #FFFBEB; /* Primary text color for open toggle */
+  background: #FFFBEB;
+  /* Primary text color for open toggle */
 }
 
-.menu-toggle.menu-open:hover span, .menu-toggle.menu-open:focus span, .menu-toggle.menu-open:active span {
+.menu-toggle.menu-open:hover span,
+.menu-toggle.menu-open:focus span,
+.menu-toggle.menu-open:active span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menu-toggle.menu-open:hover::before, .menu-toggle.menu-open:focus::before, .menu-toggle.menu-open:active::before {
+.menu-toggle.menu-open:hover::before,
+.menu-toggle.menu-open:focus::before,
+.menu-toggle.menu-open:active::before {
   top: 8px;
   left: -3px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-.menu-toggle.menu-open:hover::after, .menu-toggle.menu-open:focus::after, .menu-toggle.menu-open:active::after {
+.menu-toggle.menu-open:hover::after,
+.menu-toggle.menu-open:focus::after,
+.menu-toggle.menu-open:active::after {
   left: 9px;
   bottom: 8px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.menu-toggle.menu-open:hover::before, .menu-toggle.menu-open:hover::after, .menu-toggle.menu-open:focus::before, .menu-toggle.menu-open:focus::after, .menu-toggle.menu-open:active::before, .menu-toggle.menu-open:active::after {
+.menu-toggle.menu-open:hover::before,
+.menu-toggle.menu-open:hover::after,
+.menu-toggle.menu-open:focus::before,
+.menu-toggle.menu-open:focus::after,
+.menu-toggle.menu-open:active::before,
+.menu-toggle.menu-open:active::after {
   width: 18px;
 }
 
-.menu-toggle:hover span, .menu-toggle:focus span, .menu-toggle:active span {
+.menu-toggle:hover span,
+.menu-toggle:focus span,
+.menu-toggle:active span {
   background: rgba(255, 255, 255, 0);
 }
 
-.menu-toggle:hover::before, .menu-toggle:focus::before, .menu-toggle:active::before {
+.menu-toggle:hover::before,
+.menu-toggle:focus::before,
+.menu-toggle:active::before {
   top: 8px;
   left: -3px;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
-.menu-toggle:hover::after, .menu-toggle:focus::after, .menu-toggle:active::after {
+.menu-toggle:hover::after,
+.menu-toggle:focus::after,
+.menu-toggle:active::after {
   left: 9px;
   bottom: 8px;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
-.menu-toggle:hover::before, .menu-toggle:hover::after, .menu-toggle:focus::before, .menu-toggle:focus::after, .menu-toggle:active::before, .menu-toggle:active::after {
+.menu-toggle:hover::before,
+.menu-toggle:hover::after,
+.menu-toggle:focus::before,
+.menu-toggle:focus::after,
+.menu-toggle:active::before,
+.menu-toggle:active::after {
   width: 18px;
 }
 
@@ -246,59 +278,72 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
 
 @keyframes rgbAnimation {
   0% {
-    color: #FEFCF3; 
+    color: #FEFCF3;
   }
+
   33% {
-    color: #F8F4EA; 
+    color: #F8F4EA;
   }
+
   66% {
-    color: #E1D7C6; 
+    color: #E1D7C6;
   }
+
   100% {
-    color: #FEFCF3; 
+    color: #FEFCF3;
   }
 }
+
 @keyframes rgbAnimationBorder {
   0% {
-    border: solid #A7D129; 
+    border: solid #A7D129;
   }
+
   33% {
-    border: solid #a7d1295b; 
+    border: solid #a7d1295b;
   }
+
   66% {
-    border: solid #a7d129b7; 
+    border: solid #a7d129b7;
   }
+
   100% {
-    border: solid #A7D129; 
+    border: solid #A7D129;
   }
 }
+
 @keyframes scare {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
+
   25% {
-      opacity: 0.8;
+    opacity: 0.8;
   }
+
   50% {
-      opacity: 0.6;
+    opacity: 0.6;
   }
+
   75% {
-      opacity: 0.4;
+    opacity: 0.4;
   }
+
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
-  
+
 #about {
-  background-color: #616F39;
+  background-color: #556331;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
 .about {
-  animation: rgbAnimation 3s ease-in infinite; 
+  animation: rgbAnimation 3s ease-in infinite;
   margin-bottom: 20px;
 }
 
@@ -317,7 +362,7 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
 }
 
 .profile {
-  animation: rgbAnimationBorder  3s ease-in infinite;
+  animation: rgbAnimationBorder 3s ease-in infinite;
 }
 
 /* services area */
@@ -359,7 +404,7 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
 
 .service-box {
   background-color: #F9FBE7;
-  animation: rgbAnimationBorder 5s ease-in infinite; 
+  animation: rgbAnimationBorder 5s ease-in infinite;
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 20px;
@@ -428,7 +473,7 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
   border: none !important;
   border-radius: 25px;
   color: white;
-  transition: background-color 0.3s; /* Optional for smooth transition */
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -436,7 +481,7 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
 }
 
 .btn:active {
-  background-color: #3E432E; /* Same as hover */
+  background-color: #3E432E;
 }
 
 .text-center i {
@@ -452,10 +497,31 @@ nav .menu li a:hover, nav .menu li a:focus, nav .menu li a:active {
   resize: none;
 }
 
-#contact input, #contact textarea {
+#contact input,
+#contact textarea {
   background: #F9FBE7;
 }
 
+/* back to top button */
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed position */
+  bottom: 20px; /* Place it at the bottom of the page */
+  right: 20px; /* Place it on the right */
+  z-index: 99; /* Make sure it’s above other elements */
+  font-size: 18px; /* Optional */
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #333; /* Button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Darker color on hover */
+}
 
 /* FOOTER area */
 
@@ -468,9 +534,4 @@ footer {
 
 #footer i {
   color: #A7D129;
-}
-
-
-@media (min-width: 1080px) {
-  
 }
